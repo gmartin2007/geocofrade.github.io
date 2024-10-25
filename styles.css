@@ -1,0 +1,217 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #026dd7bf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#daytype1 {
+    background-color: #015215; /* Color de fondo dorado */
+    color: #FFFFFF; /* Color del texto */
+}
+
+#daytype2 {
+    background-color: #740000; /* Color de fondo naranja */
+    color: #FFFFFF;  
+} 
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #026cd7;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    z-index: 1000;
+    position: fixed;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #002050;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #002346;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ddd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.itinerario-tabla {
+    margin-bottom: 200px;
+    width: 50%; /* Controla el ancho de la tabla */
+    margin: 0 auto; /* Centra la tabla */
+    border-collapse: collapse; /* Elimina los bordes dobles entre celdas */
+}
+
+.itinerario-tabla td {
+    padding: 10px;
+    text-align: left; /* Alinea el texto de las celdas a la izquierda */
+}
+
+.itinerario-tabla a {
+    color: #004080; /* Color de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.itinerario-tabla a:hover {
+    text-decoration: underline; /* Subraya cuando pases el ratón */
+}
+
+
+
+
+
+.bandas-table-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 20px;
+}
+
+.bandas-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+}
+
+.bandas-table th, .bandas-table td {
+    border: 1px solid #dddddd; 
+ /*   text-align: center; */
+    padding: 10px; 
+ /*   height: 50px; */
+}
+
+.bandas-table th {
+    background-color: #f2f2f2;
+    font-weight: bold; 
+}
+
+.bandas-table td {
+    background-color: #f9f9f9; 
+} 
+
+
+
+
+
+
+/* Estilos para la lupa */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Mostrar el campo de búsqueda cuando esté activo */
+.search-active #search-input {
+    display: inline-block;
+}
+
+
+
+.search-container-lupa {
+    text-align: right;    
+}
+
+/* Estilo para el contenedor del cuadro de búsqueda */
+.search-container {
+    text-align: center;
+    margin: 20px 0; /* Espacio arriba y abajo del cuadro de búsqueda */
+}
+
+/* Estilo para el cuadro de texto */
+#search-input {
+    padding: 10px;
+    width: 300px; /* Ancho del cuadro de búsqueda */
+    border: 1px solid #ccc; /* Borde del cuadro de búsqueda */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para la lista de hermandades */
+#hermandades-list {
+    list-style-type: none; /* Sin puntos en la lista */
+    padding: 0; /* Sin padding */
+    margin-top: 20px; /* Espacio arriba de la lista */
+    text-align: center; /* Centra el texto en la lista */
+}
+
+#hermandades-list li {
+    padding: 10px; /* Espacio alrededor de cada hermandad */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+#hermandades-list li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto */
+}
+
+#hermandades-list li a:hover {
+    color: #007BFF; /* Color cuando pasa el ratón sobre el enlace */
+}
+
+/* Estilo para el botón de retroceso */
+.back-button {
+    text-align: left; /* Alinea el botón a la izquierda */
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.back-button a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007BFF; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+.back-button a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+.header-container {
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+

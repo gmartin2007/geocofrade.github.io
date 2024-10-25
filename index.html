@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Santa Sevilla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+            <h1>Semana Santa Sevilla</h1>
+            <p>Selecciona un día para ver las hermandades.</p>
+            <div class="search-container-lupa">
+                <a href="buscador.html">
+                    <img src="lupa.png" alt="Lupa" class="search-icon" />
+                </a>
+            </div> 
+    </header>
+
+
+    <main>
+        <section class="dias-semana">
+            <button onclick="location.href='Viernes de Dolores.html'" id="daytype1">Viernes de Dolores</button><br>
+            <button onclick="location.href='Sábado de Pasión.html'" id="daytype1">Sábado de Pasión</button><br>
+            <button onclick="location.href='Domingo de Ramos.html'" id="daytype2">Domingo de Ramos</button><br>
+            <button onclick="location.href='Lunes Santo.html'" id="daytype2">Lunes Santo</button><br>
+            <button onclick="location.href='Martes Santo.html'" id="daytype2">Martes Santo</button><br>
+            <button onclick="location.href='Miércoles Santo.html'" id="daytype2">Miércoles Santo</button><br>
+            <button onclick="location.href='Jueves Santo.html'" id="daytype2">Jueves Santo</button><br>
+            <button onclick="location.href='La Madrugada.html'" id="daytype2">La Madrugada</button><br>
+            <button onclick="location.href='Viernes Santo.html'" id="daytype2">Viernes Santo</button><br>
+            <button onclick="location.href='Sábado Santo.html'" id="daytype2">Sábado Santo</button><br>
+            <button onclick="location.href='Domingo de Resurección.html'" id="daytype2">Domingo de Resurrección</button>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>GeoCofrade © 2024</p>
+    </footer>
+
+    <script>
+    // Selecciona el botón de búsqueda y el campo de búsqueda
+    const searchBtn = document.getElementById('search-btn');
+    const searchInput = document.getElementById('search-input');
+    const searchContainer = document.querySelector('.search-container');
+    const hermandades = document.querySelectorAll('.hermandad a'); // Selecciona los enlaces dentro de las hermandades
+
+    // Añadir evento click al botón de búsqueda
+    searchBtn.addEventListener('click', function() {
+        // Activa el campo de búsqueda
+        searchContainer.classList.toggle('search-active');
+        // Poner foco en el campo de búsqueda cuando se active
+        if (searchContainer.classList.contains('search-active')) {
+            searchInput.focus();
+        }
+    });
+
+    // Filtrar hermandades al escribir en el campo de búsqueda
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+        hermandades.forEach(function(hermandad) {
+            const name = hermandad.textContent.toLowerCase();
+            if (name.includes(query)) {
+                hermandad.parentElement.style.display = 'block'; // Muestra la hermandad si coincide con la búsqueda
+            } else {
+                hermandad.parentElement.style.display = 'none'; // Oculta la hermandad si no coincide
+            }
+        });
+    });
+
+    // Evento para llevar al enlace de la hermandad al hacer clic en un resultado
+    hermandades.forEach(function(hermandad) {
+        hermandad.addEventListener('click', function(event) {
+            event.preventDefault(); // Evitar la acción predeterminada de ir al enlace de inmediato
+            window.location.href = hermandad.href; // Redirige a la página de la hermandad
+        });
+    });
+</script>
+
+    
+</body>
+</html>
